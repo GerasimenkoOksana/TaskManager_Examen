@@ -1,4 +1,4 @@
-//ïàòòåðíû Observer, FactoryMethod
+ï»¿//Ð¿Ð°Ñ‚Ñ‚ÐµÑ€Ð½Ñ‹ Observer, FactoryMethod
 #pragma once
 #include<iostream>
 #include<string>
@@ -144,21 +144,21 @@ inline istream& operator>>(istream& in, Date& date)
 	do
 	{		
 		do {
-			cout << "Ââåäèòå äåíü: ";
+			cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð´ÐµÐ½ÑŒ: ";
 			cin >> d;
 		} while (d < 0 || d > 31);
 		do {
-			cout << "ìåñÿö: ";
+			cout << "Ð¼ÐµÑÑÑ†: ";
 			cin >> m;
 		} while (m < 0 || m > 12);
 		do {
-			cout << "ãîä: ";
+			cout << "Ð³Ð¾Ð´: ";
 			cin >> y;
 		} while (y < 2020);
 		if (!((d > 0 && d <= 31 && (m == 1 || m == 3 || m == 5 || m == 7 || m == 8 || m == 10 || m == 12)) ||
 			(d > 0 && d <= 30 && (m == 4 || m == 6 || m == 9 || m == 11)) ||
 			(d > 0 && d <= 29 && m == 2 && y % 4 == 0) || (d > 0 && d <= 2 && m == 2 && y % 4 != 0)))
-			cout << "Íåâåðíàÿ äàòà" << endl;
+			cout << "ÐÐµÐ²ÐµÑ€Ð½Ð°Ñ Ð´Ð°Ñ‚Ð°" << endl;
 	} while (!((d > 0 && d <= 31 && (m == 1 || m == 3 || m == 5 || m == 7 || m == 8 || m == 10 || m == 12)) ||
 		(d > 0 && d <= 30 && (m == 4 || m == 6 || m == 9 || m == 11)) ||
 		(d > 0 && d <= 29 && m == 2 && y % 4 == 0) || (d > 0 && d <= 2 && m == 2 && y % 4 != 0)));
@@ -174,21 +174,21 @@ inline istream& operator>>(istream& in, Date* date)
 	do
 	{
 		do {
-			cout << "Ââåäèòå äåíü: ";
+			cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð´ÐµÐ½ÑŒ: ";
 			cin >> d;
 		} while (d < 0 || d > 31);
 		do {
-			cout << "ìåñÿö: ";
+			cout << "Ð¼ÐµÑÑÑ†: ";
 			cin >> m;
 		} while (m < 0 || m > 12);
 		do {
-			cout << "ãîä: ";
+			cout << "Ð³Ð¾Ð´: ";
 			cin >> y;
 		} while (y < 2020);
 		if (!((d > 0 && d <= 31 && (m == 1 || m == 3 || m == 5 || m == 7 || m == 8 || m == 10 || m == 12)) ||
 			(d > 0 && d <= 30 && (m == 4 || m == 6 || m == 9 || m == 11)) ||
 			(d > 0 && d <= 29 && m == 2 && y % 4 == 0) || (d > 0 && d <= 2 && m == 2 && y % 4 != 0)))
-			cout << "Íåâåðíàÿ äàòà" << endl;
+			cout << "ÐÐµÐ²ÐµÑ€Ð½Ð°Ñ Ð´Ð°Ñ‚Ð°" << endl;
 	} while (!((d > 0 && d <= 31 && (m == 1 || m == 3 || m == 5 || m == 7 || m == 8 || m == 10 || m == 12)) ||
 		(d > 0 && d <= 30 && (m == 4 || m == 6 || m == 9 || m == 11)) ||
 		(d > 0 && d <= 29 && m == 2 && y % 4 == 0) || (d > 0 && d <= 2 && m == 2 && y % 4 != 0)));
@@ -252,33 +252,33 @@ public:
 istream& operator>>(istream& in, UsualTask* task)
 {
 	system("cls");
-	cout << "  Íîâàÿ çàäà÷à" << endl;
-	cout << "Íàçâàíèå: ";
+	cout << "  ÐÐ¾Ð²Ð°Ñ Ð·Ð°Ð´Ð°Ñ‡Ð°" << endl;
+	cout << "ÐÐ°Ð·Ð²Ð°Ð½Ð¸Ðµ: ";
 	in.ignore();
 	getline(in, task->name);
 	int d, m, y, p;
 	do {
-		cout << "Äàòà âûïîëíåíèÿ: äåíü - ";
+		cout << "Ð”Ð°Ñ‚Ð° Ð²Ñ‹Ð¿Ð¾Ð»Ð½ÐµÐ½Ð¸Ñ: Ð´ÐµÐ½ÑŒ - ";
 		in >> d;
 	} while (d < 0 || d > 31);
 	do {
-		cout << "ìåñÿö - ";
+		cout << "Ð¼ÐµÑÑÑ† - ";
 		in >> m;
 	} while (m < 0 || m > 12);
 	do {
-		cout << "ãîä - ";
+		cout << "Ð³Ð¾Ð´ - ";
 		in >> y;
 	} while (y < 2020);
 	task->deadline.setDate(d, m, y);
 	do {
-		cout << "Ïðèîðèòåò: 1 - îáû÷íûé, 2 - âûñîêèé: ";
+		cout << "ÐŸÑ€Ð¸Ð¾Ñ€Ð¸Ñ‚ÐµÑ‚: 1 - Ð¾Ð±Ñ‹Ñ‡Ð½Ñ‹Ð¹, 2 - Ð²Ñ‹ÑÐ¾ÐºÐ¸Ð¹: ";
 		in >> p;
 	} while (p != 1 && p != 2);
 	if (p == 1)
 		task->prior = 0;
 	else task->prior = 1;
 	in.ignore();
-	cout << "Òåã: ";
+	cout << "Ð¢ÐµÐ³: ";
 	getline(in, task->teg);
 	return in;
 }
@@ -310,31 +310,31 @@ public:
 	virtual void delTask(int numberTask) = 0;
 	void editTask(int numberTask)
 	{		
-		cout << "íàçâàíèå çàäà÷è: " << tasks[numberTask - 1]->getName() << endl;
-		cout << "Èçìåíèòü? 1 - äà  2 - íåò: ";
+		cout << "Ð½Ð°Ð·Ð²Ð°Ð½Ð¸Ðµ Ð·Ð°Ð´Ð°Ñ‡Ð¸: " << tasks[numberTask - 1]->getName() << endl;
+		cout << "Ð˜Ð·Ð¼ÐµÐ½Ð¸Ñ‚ÑŒ? 1 - Ð´Ð°  2 - Ð½ÐµÑ‚: ";
 		int vibor;
 		cin >> vibor;
 		if (vibor == 1)
 		{
-			cout << "Ââåäèòå íîâîå íàçâàíèå: ";
+			cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð½Ð¾Ð²Ð¾Ðµ Ð½Ð°Ð·Ð²Ð°Ð½Ð¸Ðµ: ";
 			string name;
 			cin.ignore();
 			getline(cin, name);
 			tasks[numberTask - 1]->setName(name);
 		}
-		cout << "ñðîê âûïîëíåíèÿ: ";
+		cout << "ÑÑ€Ð¾Ðº Ð²Ñ‹Ð¿Ð¾Ð»Ð½ÐµÐ½Ð¸Ñ: ";
 		Date d = tasks[numberTask - 1]->getDate();
 		cout << d << endl;
-		cout << "Èçìåíèòü? 1 - äà  2 - íåò: ";		
+		cout << "Ð˜Ð·Ð¼ÐµÐ½Ð¸Ñ‚ÑŒ? 1 - Ð´Ð°  2 - Ð½ÐµÑ‚: ";		
 		cin >> vibor;
 		if (vibor == 1)
 		{
-			cout << "Ââåäèòå íîâóþ äàòó: ";
+			cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð½Ð¾Ð²ÑƒÑŽ Ð´Ð°Ñ‚Ñƒ: ";
 			cin >> d;
 			tasks[numberTask - 1]->setDate(d);
 		}
-		cout << "Ïðèîðèòåò: " << tasks[numberTask - 1]->getPrior() << endl;
-		cout << "Èçìåíèòü? 1 - äà  2 - íåò: ";		
+		cout << "ÐŸÑ€Ð¸Ð¾Ñ€Ð¸Ñ‚ÐµÑ‚: " << tasks[numberTask - 1]->getPrior() << endl;
+		cout << "Ð˜Ð·Ð¼ÐµÐ½Ð¸Ñ‚ÑŒ? 1 - Ð´Ð°  2 - Ð½ÐµÑ‚: ";		
 		cin >> vibor;
 		if (vibor == 1)
 		{
@@ -344,12 +344,12 @@ public:
 			else pr = 0;
 			tasks[numberTask - 1]->setPrior(pr);
 		}
-		cout << "òåãè: " << tasks[numberTask - 1]->getTeg() << endl;
-		cout << "1 - èçìåíèòü  2 - äîáàâèòü òåã  3 - îñòàâèòü áåç èçìåíåíèé: ";		
+		cout << "Ñ‚ÐµÐ³Ð¸: " << tasks[numberTask - 1]->getTeg() << endl;
+		cout << "1 - Ð¸Ð·Ð¼ÐµÐ½Ð¸Ñ‚ÑŒ  2 - Ð´Ð¾Ð±Ð°Ð²Ð¸Ñ‚ÑŒ Ñ‚ÐµÐ³  3 - Ð¾ÑÑ‚Ð°Ð²Ð¸Ñ‚ÑŒ Ð±ÐµÐ· Ð¸Ð·Ð¼ÐµÐ½ÐµÐ½Ð¸Ð¹: ";		
 		cin >> vibor;
 		if (vibor == 1)
 		{
-			cout << "Ââåäèòå íîâûé òåã: ";
+			cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð½Ð¾Ð²Ñ‹Ð¹ Ñ‚ÐµÐ³: ";
 			string teg;
 			cin.ignore();
 			getline(cin, teg);
@@ -357,7 +357,7 @@ public:
 		}
 		else if (vibor == 2)
 		{
-			cout << "Ââåäèòå äîïîëíèòåëüíûé òåã: ";
+			cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð´Ð¾Ð¿Ð¾Ð»Ð½Ð¸Ñ‚ÐµÐ»ÑŒÐ½Ñ‹Ð¹ Ñ‚ÐµÐ³: ";
 			string teg;
 			cin.ignore();
 			getline(cin, teg);
@@ -369,18 +369,18 @@ public:
 	void findTask()
 	{
 		system("cls");
-		cout << "                        Ïîèñê  çàïëàíèðîâàííûõ çàäà÷ äëÿ " << name << endl;
+		cout << "                        ÐŸÐ¾Ð¸ÑÐº  Ð·Ð°Ð¿Ð»Ð°Ð½Ð¸Ñ€Ð¾Ð²Ð°Ð½Ð½Ñ‹Ñ… Ð·Ð°Ð´Ð°Ñ‡ Ð´Ð»Ñ " << name << endl;
 		cout << "----------------------------------------------------------------------------------------------------" << endl;
-		cout << "1 - ïî äàòå" << endl;
-		cout << "2 - ïî òåãàì" << endl;
-		cout << "3 - ïî ïðèîðèòåòó" << endl;
-		cout << "0 - âûõîä â ïðåäûäóùåå ìåíþ" << endl;
+		cout << "1 - Ð¿Ð¾ Ð´Ð°Ñ‚Ðµ" << endl;
+		cout << "2 - Ð¿Ð¾ Ñ‚ÐµÐ³Ð°Ð¼" << endl;
+		cout << "3 - Ð¿Ð¾ Ð¿Ñ€Ð¸Ð¾Ñ€Ð¸Ñ‚ÐµÑ‚Ñƒ" << endl;
+		cout << "0 - Ð²Ñ‹Ñ…Ð¾Ð´ Ð² Ð¿Ñ€ÐµÐ´Ñ‹Ð´ÑƒÑ‰ÐµÐµ Ð¼ÐµÐ½ÑŽ" << endl;
 		int vibor;
 		cin >> vibor;
 		do {
 			if (vibor != 1 && vibor != 2 && vibor != 3 && vibor != 0)
 			{
-				cout << "îøèáêà, ïîâòîðèòå ââîä: ";
+				cout << "Ð¾ÑˆÐ¸Ð±ÐºÐ°, Ð¿Ð¾Ð²Ñ‚Ð¾Ñ€Ð¸Ñ‚Ðµ Ð²Ð²Ð¾Ð´: ";
 				cin >> vibor;
 			}
 		} while (vibor != 1 && vibor != 2 && vibor != 3 && vibor != 0);
@@ -394,7 +394,7 @@ public:
 	}
 	void findDate()
 	{
-		cout << "Ââåäèòå äàòó: ";
+		cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð´Ð°Ñ‚Ñƒ: ";
 		Date* date = new Date();
 		cin >> date;
 		int kol = 0;
@@ -405,12 +405,12 @@ public:
 				kol++;
 			}
 		if (kol == 0)
-			cout << "Íåò çàïëàíèðîâàííûõ çàäà÷ íà äàòó" << date << endl;
+			cout << "ÐÐµÑ‚ Ð·Ð°Ð¿Ð»Ð°Ð½Ð¸Ñ€Ð¾Ð²Ð°Ð½Ð½Ñ‹Ñ… Ð·Ð°Ð´Ð°Ñ‡ Ð½Ð° Ð´Ð°Ñ‚Ñƒ" << date << endl;
 		system("pause");
 	}
 	void findTag()
 	{
-		cout << "Ââåäèòå òåã äëÿ ïîèñêà: ";
+		cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ñ‚ÐµÐ³ Ð´Ð»Ñ Ð¿Ð¾Ð¸ÑÐºÐ°: ";
 		string tfind, teg;
 		cin >> tfind;
 		int kol=0;
@@ -426,19 +426,19 @@ public:
 			}
 		}
 		if (kol == 0)
-			cout << "Íåò çàïëàíèðîâàííûõ çàäà÷ ñ äàííûì òåãîì" << endl;
+			cout << "ÐÐµÑ‚ Ð·Ð°Ð¿Ð»Ð°Ð½Ð¸Ñ€Ð¾Ð²Ð°Ð½Ð½Ñ‹Ñ… Ð·Ð°Ð´Ð°Ñ‡ Ñ Ð´Ð°Ð½Ð½Ñ‹Ð¼ Ñ‚ÐµÐ³Ð¾Ð¼" << endl;
 		system("pause");
 	}
 	void findPrior()
 	{
-		cout << "Âûáåðèòå ïðèîðèòåò äëÿ ïîèñêà: 1 - îáû÷íûé, 2 - âûñîêèé: ";
+		cout << "Ð’Ñ‹Ð±ÐµÑ€Ð¸Ñ‚Ðµ Ð¿Ñ€Ð¸Ð¾Ñ€Ð¸Ñ‚ÐµÑ‚ Ð´Ð»Ñ Ð¿Ð¾Ð¸ÑÐºÐ°: 1 - Ð¾Ð±Ñ‹Ñ‡Ð½Ñ‹Ð¹, 2 - Ð²Ñ‹ÑÐ¾ÐºÐ¸Ð¹: ";
 		int vibor;
 		cin >> vibor;
 		do
 		{
 			if (vibor != 1 && vibor != 2)
 			{
-				cout << "îøèáêà, ïîâòîðèòå ââîä: ";
+				cout << "Ð¾ÑˆÐ¸Ð±ÐºÐ°, Ð¿Ð¾Ð²Ñ‚Ð¾Ñ€Ð¸Ñ‚Ðµ Ð²Ð²Ð¾Ð´: ";
 				cin >> vibor;
 			}
 		} while (vibor != 1 && vibor != 2);
@@ -452,7 +452,7 @@ public:
 		  }
 		}
 		if (kol == 0)
-				cout << "Íåò çàïëàíèðîâàííûõ çàäà÷ ñ äàííûì ïðèîðèòåòîì" << endl;
+				cout << "ÐÐµÑ‚ Ð·Ð°Ð¿Ð»Ð°Ð½Ð¸Ñ€Ð¾Ð²Ð°Ð½Ð½Ñ‹Ñ… Ð·Ð°Ð´Ð°Ñ‡ Ñ Ð´Ð°Ð½Ð½Ñ‹Ð¼ Ð¿Ñ€Ð¸Ð¾Ñ€Ð¸Ñ‚ÐµÑ‚Ð¾Ð¼" << endl;
 		system("pause");	
 	}
 	virtual void print(ostream& out) = 0;
@@ -463,7 +463,7 @@ public:
 	}
 	void save()
 	{
-		cout << "Ââåäèòå èìÿ ôàéëà: ";
+		cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð¸Ð¼Ñ Ñ„Ð°Ð¹Ð»Ð°: ";
 		string namef;
 		cin >> namef;
 		if (namef.find(".txt") == -1)
@@ -471,7 +471,7 @@ public:
 		ofstream fout(namef);
 		print(fout);
 		fout.close();
-		cout << "Äàííûå ñîõðàíåíû â ôàéë " << namef << endl;
+		cout << "Ð”Ð°Ð½Ð½Ñ‹Ðµ ÑÐ¾Ñ…Ñ€Ð°Ð½ÐµÐ½Ñ‹ Ð² Ñ„Ð°Ð¹Ð» " << namef << endl;
 		system("pause");
 	}
 	virtual void reminder(Date* datenow, ostream& out) = 0;
@@ -480,7 +480,7 @@ public:
 	int getKolTask() { return tasks.size(); }	
 };
 
-class AdultUser : public User //âçðîñëûé ïîëüçîâàòåëü
+class AdultUser : public User //Ð²Ð·Ñ€Ð¾ÑÐ»Ñ‹Ð¹ Ð¿Ð¾Ð»ÑŒÐ·Ð¾Ð²Ð°Ñ‚ÐµÐ»ÑŒ
 {
 	string password;
 	
@@ -517,7 +517,7 @@ public:
 		auto del = tasks.begin();
 		advance(del, numberTask - 1);
 		tasks.erase(del);
-		cout << "Çàäà÷à óäàëåíà!" << endl;
+		cout << "Ð—Ð°Ð´Ð°Ñ‡Ð° ÑƒÐ´Ð°Ð»ÐµÐ½Ð°!" << endl;
 		system("pause");
 	}
 	
@@ -531,13 +531,13 @@ public:
 	void print(ostream& out) override
 	{
 		if (tasks.size() == 0)
-			out << "íåò çàïëàíèðîâàííûõ çàäà÷" << endl;
+			out << "Ð½ÐµÑ‚ Ð·Ð°Ð¿Ð»Ð°Ð½Ð¸Ñ€Ð¾Ð²Ð°Ð½Ð½Ñ‹Ñ… Ð·Ð°Ð´Ð°Ñ‡" << endl;
 		else
 		{
 			out << "----------------------------------------------------------------------------------------------------" << endl;
-			out << "                          Ñïèñîê çàïëàíèðîâàííûõ çàäà÷ äëÿ " << name << endl;
+			out << "                          Ð¡Ð¿Ð¸ÑÐ¾Ðº Ð·Ð°Ð¿Ð»Ð°Ð½Ð¸Ñ€Ð¾Ð²Ð°Ð½Ð½Ñ‹Ñ… Ð·Ð°Ð´Ð°Ñ‡ Ð´Ð»Ñ " << name << endl;
 			out << "----------------------------------------------------------------------------------------------------" << endl;
-			out << " ¹ |               çàäà÷à                | ñðîê âûïîëíåíèÿ | ïðèîðèòåò |            òåã        " << endl;
+			out << " â„– |               Ð·Ð°Ð´Ð°Ñ‡Ð°                | ÑÑ€Ð¾Ðº Ð²Ñ‹Ð¿Ð¾Ð»Ð½ÐµÐ½Ð¸Ñ | Ð¿Ñ€Ð¸Ð¾Ñ€Ð¸Ñ‚ÐµÑ‚ |            Ñ‚ÐµÐ³        " << endl;
 			out << "----------------------------------------------------------------------------------------------------" << endl;
 
 			int i = 1;
@@ -559,7 +559,7 @@ public:
 	}	
 };
 
-class ChildUser : public User //ðåáåíîê
+class ChildUser : public User //Ñ€ÐµÐ±ÐµÐ½Ð¾Ðº
 {		
 	AdultUser* parent;
 	
@@ -583,12 +583,12 @@ public:
 	string getParentPassword() { return parent->getPassword(); }	
 	void delTask(int numberTask) override
 	{					
-		cout << "Íåîáõîäèìî ïîäòâåðæäåíèå ðîäèòåëåé: ëîãèí ðîäèòåëÿ: ";
+		cout << "ÐÐµÐ¾Ð±Ñ…Ð¾Ð´Ð¸Ð¼Ð¾ Ð¿Ð¾Ð´Ñ‚Ð²ÐµÑ€Ð¶Ð´ÐµÐ½Ð¸Ðµ Ñ€Ð¾Ð´Ð¸Ñ‚ÐµÐ»ÐµÐ¹: Ð»Ð¾Ð³Ð¸Ð½ Ñ€Ð¾Ð´Ð¸Ñ‚ÐµÐ»Ñ: ";
 		string namePar;
 		cin >> namePar;
 		if (namePar == getParentName())
 		{
-			cout << "ïàðîëü ðîäèòåëÿ: " << endl;
+			cout << "Ð¿Ð°Ñ€Ð¾Ð»ÑŒ Ñ€Ð¾Ð´Ð¸Ñ‚ÐµÐ»Ñ: " << endl;
 			string pas = getPassword();
 			hash<string> encrypt;
 			pas = to_string(encrypt(pas));
@@ -597,21 +597,21 @@ public:
 				auto del = tasks.begin();
 				advance(del, numberTask - 1);
 				tasks.erase(del);
-				cout << "Çàäà÷à óäàëåíà!" << endl;
+				cout << "Ð—Ð°Ð´Ð°Ñ‡Ð° ÑƒÐ´Ð°Ð»ÐµÐ½Ð°!" << endl;
 			}
-			else cout << "Íåâåðíûé ïàðîëü" << endl;
+			else cout << "ÐÐµÐ²ÐµÑ€Ð½Ñ‹Ð¹ Ð¿Ð°Ñ€Ð¾Ð»ÑŒ" << endl;
 		}
-		else cout << "Íåâåðíîå èìÿ" << endl;
+		else cout << "ÐÐµÐ²ÐµÑ€Ð½Ð¾Ðµ Ð¸Ð¼Ñ" << endl;
 		system("pause");
 	}	
 	void edit(int numberTask) override
 	{
-		cout << "Íåîáõîäèìî ïîäòâåðæäåíèå ðîäèòåëåé: ëîãèí ðîäèòåëÿ: ";
+		cout << "ÐÐµÐ¾Ð±Ñ…Ð¾Ð´Ð¸Ð¼Ð¾ Ð¿Ð¾Ð´Ñ‚Ð²ÐµÑ€Ð¶Ð´ÐµÐ½Ð¸Ðµ Ñ€Ð¾Ð´Ð¸Ñ‚ÐµÐ»ÐµÐ¹: Ð»Ð¾Ð³Ð¸Ð½ Ñ€Ð¾Ð´Ð¸Ñ‚ÐµÐ»Ñ: ";
 		string namePar;
 		cin >> namePar;
 		if (namePar == getParentName())
 		{
-			cout << "ïàðîëü ðîäèòåëÿ: "<<endl;
+			cout << "Ð¿Ð°Ñ€Ð¾Ð»ÑŒ Ñ€Ð¾Ð´Ð¸Ñ‚ÐµÐ»Ñ: "<<endl;
 			string pas = getPassword();
 			hash<string> encrypt;
 			pas = to_string(encrypt(pas));
@@ -619,9 +619,9 @@ public:
 			{
 				editTask(numberTask);
 			}
-			else cout << "Íåâåðíûé ïàðîëü" << endl;
+			else cout << "ÐÐµÐ²ÐµÑ€Ð½Ñ‹Ð¹ Ð¿Ð°Ñ€Ð¾Ð»ÑŒ" << endl;
 		}
-		else cout << "Íåâåðíîå èìÿ" << endl;
+		else cout << "ÐÐµÐ²ÐµÑ€Ð½Ð¾Ðµ Ð¸Ð¼Ñ" << endl;
 		system("pause");
 	}	
 	void setParent(AdultUser* p) 
@@ -631,13 +631,13 @@ public:
 	void print(ostream& out) override
 	{
 		if (tasks.size() == 0)
-			out << "íåò çàïëàíèðîâàííûõ çàäà÷" << endl;
+			out << "Ð½ÐµÑ‚ Ð·Ð°Ð¿Ð»Ð°Ð½Ð¸Ñ€Ð¾Ð²Ð°Ð½Ð½Ñ‹Ñ… Ð·Ð°Ð´Ð°Ñ‡" << endl;
 		else
 		{
 			out << "----------------------------------------------------------------------------------------------------" << endl;
-			out << "Ñïèñîê çàïëàíèðîâàííûõ çàäà÷ äëÿ ðåáåíêà " << name << " ðîäèòåëè: " << parent->getName() << endl;
+			out << "Ð¡Ð¿Ð¸ÑÐ¾Ðº Ð·Ð°Ð¿Ð»Ð°Ð½Ð¸Ñ€Ð¾Ð²Ð°Ð½Ð½Ñ‹Ñ… Ð·Ð°Ð´Ð°Ñ‡ Ð´Ð»Ñ Ñ€ÐµÐ±ÐµÐ½ÐºÐ° " << name << " Ñ€Ð¾Ð´Ð¸Ñ‚ÐµÐ»Ð¸: " << parent->getName() << endl;
 			out << "----------------------------------------------------------------------------------------------------" << endl;
-			out << " ¹ |                 çàäà÷à              | ñðîê âûïîëíåíèÿ | ïðèîðèòåò |            òåã        " << endl;
+			out << " â„– |                 Ð·Ð°Ð´Ð°Ñ‡Ð°              | ÑÑ€Ð¾Ðº Ð²Ñ‹Ð¿Ð¾Ð»Ð½ÐµÐ½Ð¸Ñ | Ð¿Ñ€Ð¸Ð¾Ñ€Ð¸Ñ‚ÐµÑ‚ |            Ñ‚ÐµÐ³        " << endl;
 			out << "----------------------------------------------------------------------------------------------------" << endl;
 
 			int i = 1;
@@ -669,7 +669,7 @@ public:
 void UsualTask::notify(User* us, ostream& out)
 {
 	SetColor(10, 0);
-	out << "Íàïîìèíàíèå äëÿ: " << us->getName() << " çàäà÷à " << name << " äîëæíà áûòü âûïîëíåíà " << deadline <<"    Ïðèîðèòåò - " << prior <<  endl;
+	out << "ÐÐ°Ð¿Ð¾Ð¼Ð¸Ð½Ð°Ð½Ð¸Ðµ Ð´Ð»Ñ: " << us->getName() << " Ð·Ð°Ð´Ð°Ñ‡Ð° " << name << " Ð´Ð¾Ð»Ð¶Ð½Ð° Ð±Ñ‹Ñ‚ÑŒ Ð²Ñ‹Ð¿Ð¾Ð»Ð½ÐµÐ½Ð° " << deadline <<"    ÐŸÑ€Ð¸Ð¾Ñ€Ð¸Ñ‚ÐµÑ‚ - " << prior <<  endl;
 	out << "----------------------------------------------------------------------------------------------------" << endl;
 	SetColor(15, 0);
 }
@@ -714,50 +714,50 @@ public:
 	{
 		system("cls");
 		cout << "----------------------------------------------------" << endl;
-		cout << "Äîáàâëåíèå íîâîãî ïîëüçîâàòåëÿ " << endl;
+		cout << "Ð”Ð¾Ð±Ð°Ð²Ð»ÐµÐ½Ð¸Ðµ Ð½Ð¾Ð²Ð¾Ð³Ð¾ Ð¿Ð¾Ð»ÑŒÐ·Ð¾Ð²Ð°Ñ‚ÐµÐ»Ñ " << endl;
 		cout << "----------------------------------------------------" << endl;
 		int k;
 		do {
-			cout << "Îïðåäåëèòå êàòåãîðèþ ïîëüçîâàòåëÿ  1 - âçðîñëûé, 2 - ðåáåíîê:    ";
+			cout << "ÐžÐ¿Ñ€ÐµÐ´ÐµÐ»Ð¸Ñ‚Ðµ ÐºÐ°Ñ‚ÐµÐ³Ð¾Ñ€Ð¸ÑŽ Ð¿Ð¾Ð»ÑŒÐ·Ð¾Ð²Ð°Ñ‚ÐµÐ»Ñ  1 - Ð²Ð·Ñ€Ð¾ÑÐ»Ñ‹Ð¹, 2 - Ñ€ÐµÐ±ÐµÐ½Ð¾Ðº:    ";
 			cin >> k;
 		} while (k != 1 && k != 2);
 		if (k == 1)
 		{
 			string n, p;
-			cout << "Èìÿ (ëîãèí): ";
+			cout << "Ð˜Ð¼Ñ (Ð»Ð¾Ð³Ð¸Ð½): ";
 			cin >> n;
 			do {
 				if (adults.count(n) || childs.count(n))
 				{
-					cout << "Ïîëüçîâàòåëü ñ òàêèì èìåíåì ñóùåñòâóåò, ïðèäóìàéòå äðóãîå èìÿ:   ";
+					cout << "ÐŸÐ¾Ð»ÑŒÐ·Ð¾Ð²Ð°Ñ‚ÐµÐ»ÑŒ Ñ Ñ‚Ð°ÐºÐ¸Ð¼ Ð¸Ð¼ÐµÐ½ÐµÐ¼ ÑÑƒÑ‰ÐµÑÑ‚Ð²ÑƒÐµÑ‚, Ð¿Ñ€Ð¸Ð´ÑƒÐ¼Ð°Ð¹Ñ‚Ðµ Ð´Ñ€ÑƒÐ³Ð¾Ðµ Ð¸Ð¼Ñ:   ";
 					cin >> n;
 				}
 			} while (adults.count(n) || childs.count(n));
-			cout << "Ïàðîëü: " << endl;
+			cout << "ÐŸÐ°Ñ€Ð¾Ð»ÑŒ: " << endl;
 			p = getPassword();			
 			hash<string>encrypt;
 			p = to_string(encrypt(p));
 			AdultUser* us = new AdultUser(n, p);			
 			adults.insert(make_pair(n, us));
-			cout << "Ïîëüçîâàòåëü " << n << " óñïåøíî äîáàâëåí!" << endl;;
+			cout << "ÐŸÐ¾Ð»ÑŒÐ·Ð¾Ð²Ð°Ñ‚ÐµÐ»ÑŒ " << n << " ÑƒÑÐ¿ÐµÑˆÐ½Ð¾ Ð´Ð¾Ð±Ð°Ð²Ð»ÐµÐ½!" << endl;;
 		}
 		else
 		{
 			string n, namePar, p;
-			cout << "Èìÿ (ëîãèí): ";
+			cout << "Ð˜Ð¼Ñ (Ð»Ð¾Ð³Ð¸Ð½): ";
 			cin >> n;
 			do {
 				if (adults.count(n) || childs.count(n))
 				{
-					cout << "Ïîëüçîâàòåëü ñ òàêèì èìåíåì ñóùåñòâóåò, ïðèäóìàéòå äðóãîå èìÿ:  ";
+					cout << "ÐŸÐ¾Ð»ÑŒÐ·Ð¾Ð²Ð°Ñ‚ÐµÐ»ÑŒ Ñ Ñ‚Ð°ÐºÐ¸Ð¼ Ð¸Ð¼ÐµÐ½ÐµÐ¼ ÑÑƒÑ‰ÐµÑÑ‚Ð²ÑƒÐµÑ‚, Ð¿Ñ€Ð¸Ð´ÑƒÐ¼Ð°Ð¹Ñ‚Ðµ Ð´Ñ€ÑƒÐ³Ð¾Ðµ Ð¸Ð¼Ñ:  ";
 					cin >> n;
 				}
 			} while (adults.count(n) || childs.count(n));
-			cout << "Íåîáõîäèìî ïîäòâåðæäåíèå ðîäèòåëåé, ââåäèòå èìÿ ðîäèòåëÿ:   ";
+			cout << "ÐÐµÐ¾Ð±Ñ…Ð¾Ð´Ð¸Ð¼Ð¾ Ð¿Ð¾Ð´Ñ‚Ð²ÐµÑ€Ð¶Ð´ÐµÐ½Ð¸Ðµ Ñ€Ð¾Ð´Ð¸Ñ‚ÐµÐ»ÐµÐ¹, Ð²Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð¸Ð¼Ñ Ñ€Ð¾Ð´Ð¸Ñ‚ÐµÐ»Ñ:   ";
 			cin >> namePar;
 			if (adults.count(namePar))
 			{				
-				cout << "Ïàðîëü: "<<endl;
+				cout << "ÐŸÐ°Ñ€Ð¾Ð»ÑŒ: "<<endl;
 				p = getPassword();
 				hash<string>encrypt;
 				p = to_string(encrypt(p));
@@ -767,11 +767,11 @@ public:
 					AdultUser* parent = new AdultUser(namePar, adults[namePar]->getPassword());					
 					us->setParent(parent);
 					childs.insert(make_pair(n, us));
-					cout << "Ïîëüçîâàòåëü " << n << " óñïåøíî äîáàâëåí!" << endl;;
+					cout << "ÐŸÐ¾Ð»ÑŒÐ·Ð¾Ð²Ð°Ñ‚ÐµÐ»ÑŒ " << n << " ÑƒÑÐ¿ÐµÑˆÐ½Ð¾ Ð´Ð¾Ð±Ð°Ð²Ð»ÐµÐ½!" << endl;;
 				}
-				else cout << "Íåâåðíûé ïàðîëü" << endl;
+				else cout << "ÐÐµÐ²ÐµÑ€Ð½Ñ‹Ð¹ Ð¿Ð°Ñ€Ð¾Ð»ÑŒ" << endl;
 			}
-			else cout << "Ïîëüçîâàòåëÿ ñ òàêèì èìåíåì íåò" << endl;
+			else cout << "ÐŸÐ¾Ð»ÑŒÐ·Ð¾Ð²Ð°Ñ‚ÐµÐ»Ñ Ñ Ñ‚Ð°ÐºÐ¸Ð¼ Ð¸Ð¼ÐµÐ½ÐµÐ¼ Ð½ÐµÑ‚" << endl;
 		}
 		system("pause");
 	}
@@ -783,9 +783,9 @@ public:
 	{
 		system("cls");
 		cout << "----------------------------------------------------------------------------------------------------" << endl;
-		cout << "                  Ïëàíèðîâùèê çàäà÷ TaskManager" ;
+		cout << "                  ÐŸÐ»Ð°Ð½Ð¸Ñ€Ð¾Ð²Ñ‰Ð¸Ðº Ð·Ð°Ð´Ð°Ñ‡ TaskManager" ;
 		SetColor(10, 0);
-		cout<<setw(35)<<"Ñåãîäíÿ: "<<datenow<<endl;
+		cout<<setw(35)<<"Ð¡ÐµÐ³Ð¾Ð´Ð½Ñ: "<<datenow<<endl;
 		SetColor(15, 0);
 		cout << "----------------------------------------------------------------------------------------------------" << endl;
 	}
@@ -799,15 +799,15 @@ public:
 		for (auto& x : childs)
 			x.second->reminder(date, fout);
 		fout.close();
-		cout << "Íàïîìèíàíèÿ îòïðàâëåíû" << endl;
-		cout << "Õîòèòå ïðîñìîòðåòü ôàéë ðàññûëêè? 1 - äà, 2 - íåò:  ";
+		cout << "ÐÐ°Ð¿Ð¾Ð¼Ð¸Ð½Ð°Ð½Ð¸Ñ Ð¾Ñ‚Ð¿Ñ€Ð°Ð²Ð»ÐµÐ½Ñ‹" << endl;
+		cout << "Ð¥Ð¾Ñ‚Ð¸Ñ‚Ðµ Ð¿Ñ€Ð¾ÑÐ¼Ð¾Ñ‚Ñ€ÐµÑ‚ÑŒ Ñ„Ð°Ð¹Ð» Ñ€Ð°ÑÑÑ‹Ð»ÐºÐ¸? 1 - Ð´Ð°, 2 - Ð½ÐµÑ‚:  ";
 		int vibor;
 		cin >> vibor;
 		do
 		{
 			if (vibor != 1 && vibor != 2)
 			{
-				cout << endl << "îøèáêà, ââåäèòå 1 èëè 2:  ";
+				cout << endl << "Ð¾ÑˆÐ¸Ð±ÐºÐ°, Ð²Ð²ÐµÐ´Ð¸Ñ‚Ðµ 1 Ð¸Ð»Ð¸ 2:  ";
 				cin >> vibor;
 			}
 		} while (vibor != 1 && vibor != 2);
@@ -831,12 +831,12 @@ public:
 	void vhod()
 	{
 		shapka();
-		cout << "èìÿ (ëîãèí): ";
+		cout << "Ð¸Ð¼Ñ (Ð»Ð¾Ð³Ð¸Ð½): ";
 		string name;
 		cin >> name;
 		if (adults.count(name) || childs.count(name))
 			menu(name);
-		else cout << "Ïîëüçîâàòåëü ñ òàêèì èìåíåì íå íàéäåí" << endl;
+		else cout << "ÐŸÐ¾Ð»ÑŒÐ·Ð¾Ð²Ð°Ñ‚ÐµÐ»ÑŒ Ñ Ñ‚Ð°ÐºÐ¸Ð¼ Ð¸Ð¼ÐµÐ½ÐµÐ¼ Ð½Ðµ Ð½Ð°Ð¹Ð´ÐµÐ½" << endl;
 		system("pause");
 	}
 	void menu()
@@ -848,16 +848,16 @@ public:
 		{
 			system("cls");
 			shapka();
-			cout << "1 - Âõîä" << endl;
-			cout << "2 - Ðåãèñòðàöèÿ" << endl;
-			cout << "3 - Óñòàíîâèòü äàòó" << endl;
-			cout << "0 - Çàêðûòü ïðîãðàììó" << endl;			
+			cout << "1 - Ð’Ñ…Ð¾Ð´" << endl;
+			cout << "2 - Ð ÐµÐ³Ð¸ÑÑ‚Ñ€Ð°Ñ†Ð¸Ñ" << endl;
+			cout << "3 - Ð£ÑÑ‚Ð°Ð½Ð¾Ð²Ð¸Ñ‚ÑŒ Ð´Ð°Ñ‚Ñƒ" << endl;
+			cout << "0 - Ð—Ð°ÐºÑ€Ñ‹Ñ‚ÑŒ Ð¿Ñ€Ð¾Ð³Ñ€Ð°Ð¼Ð¼Ñƒ" << endl;			
 			int vibor;
 			cin >> vibor;
 			do {
 				if (vibor != 1 && vibor != 2 && vibor != 3 && vibor != 0)
 				{
-					cout << "îøèáêà, ïîâòîðèòå ââîä: ";
+					cout << "Ð¾ÑˆÐ¸Ð±ÐºÐ°, Ð¿Ð¾Ð²Ñ‚Ð¾Ñ€Ð¸Ñ‚Ðµ Ð²Ð²Ð¾Ð´: ";
 					cin >> vibor;
 				}
 			} while (vibor != 1 && vibor != 2 && vibor != 3 && vibor != 0);
@@ -873,7 +873,7 @@ public:
 	void setDate()
 	{		
 		cin >> datenow;
-		cout << "Äàòà óñòàíîâëåíà!" << endl;		
+		cout << "Ð”Ð°Ñ‚Ð° ÑƒÑÑ‚Ð°Ð½Ð¾Ð²Ð»ÐµÐ½Ð°!" << endl;		
 		system("pause");
 		reminderALL(datenow);
 	}
@@ -884,9 +884,9 @@ public:
 			//shapka;
 			system("cls");
 			cout << "----------------------------------------------------------------------------------------------------" << endl;
-			cout << "                  Ïëàíèðîâùèê çàäà÷ TaskManager";
+			cout << "                  ÐŸÐ»Ð°Ð½Ð¸Ñ€Ð¾Ð²Ñ‰Ð¸Ðº Ð·Ð°Ð´Ð°Ñ‡ TaskManager";
 			SetColor(10, 0);
-			cout << setw(30) << "Ñåãîäíÿ: " << datenow << endl;
+			cout << setw(30) << "Ð¡ÐµÐ³Ð¾Ð´Ð½Ñ: " << datenow << endl;
 			SetColor(15, 0);			
 			cout << "----------------------------------------------------------------------------------------------------" << endl;
 			Creator* creator;
@@ -899,21 +899,21 @@ public:
 				us = adults[nameUser];			
 			else				
 				us = childs[nameUser];			
-			cout << "Âû âîøëè ïîä èìåíåì " << nameUser << "  Ñòàòóñ: " << us->getStatus() << endl;
+			cout << "Ð’Ñ‹ Ð²Ð¾ÑˆÐ»Ð¸ Ð¿Ð¾Ð´ Ð¸Ð¼ÐµÐ½ÐµÐ¼ " << nameUser << "  Ð¡Ñ‚Ð°Ñ‚ÑƒÑ: " << us->getStatus() << endl;
 			cout << "----------------------------------------------------------------------------------------------------" << endl;
 			us->reminder(datenow,cout);
-			cout << "1 - Äîáàâèòü çàäà÷ó" << endl;
-			cout << "2 - Óäàëèòü çàäà÷ó" << endl;
-			cout << "3 - Ðåäàêòèðîâàòü çàäà÷ó" << endl;
-			cout << "4 - Ïðîñìîòð âñåõ çàäà÷" << endl;
-			cout << "5 - Ïîèñê" << endl;
-			cout << "6 - Ñîõðàíèòü â ôàéë" << endl;
-			cout << "7 - Óñòàíîâèòü äàòó" << endl;
-			cout << "0 - Âûõîä â ïðåäûäóùåå ìåíþ" << endl;
+			cout << "1 - Ð”Ð¾Ð±Ð°Ð²Ð¸Ñ‚ÑŒ Ð·Ð°Ð´Ð°Ñ‡Ñƒ" << endl;
+			cout << "2 - Ð£Ð´Ð°Ð»Ð¸Ñ‚ÑŒ Ð·Ð°Ð´Ð°Ñ‡Ñƒ" << endl;
+			cout << "3 - Ð ÐµÐ´Ð°ÐºÑ‚Ð¸Ñ€Ð¾Ð²Ð°Ñ‚ÑŒ Ð·Ð°Ð´Ð°Ñ‡Ñƒ" << endl;
+			cout << "4 - ÐŸÑ€Ð¾ÑÐ¼Ð¾Ñ‚Ñ€ Ð²ÑÐµÑ… Ð·Ð°Ð´Ð°Ñ‡" << endl;
+			cout << "5 - ÐŸÐ¾Ð¸ÑÐº" << endl;
+			cout << "6 - Ð¡Ð¾Ñ…Ñ€Ð°Ð½Ð¸Ñ‚ÑŒ Ð² Ñ„Ð°Ð¹Ð»" << endl;
+			cout << "7 - Ð£ÑÑ‚Ð°Ð½Ð¾Ð²Ð¸Ñ‚ÑŒ Ð´Ð°Ñ‚Ñƒ" << endl;
+			cout << "0 - Ð’Ñ‹Ñ…Ð¾Ð´ Ð² Ð¿Ñ€ÐµÐ´Ñ‹Ð´ÑƒÑ‰ÐµÐµ Ð¼ÐµÐ½ÑŽ" << endl;
 			cout << "----------------------------------------------------------------------------------------------------" << endl;
 			if (datenow == new Date(1, 1, 2020))
 			{				
-				cout << "Äàòà íå óñòàíîâëåíà! Ïëàíèðîâùèê ìîæåò ðàáîòàòü íåêîððåêòíî!" << endl;
+				cout << "Ð”Ð°Ñ‚Ð° Ð½Ðµ ÑƒÑÑ‚Ð°Ð½Ð¾Ð²Ð»ÐµÐ½Ð°! ÐŸÐ»Ð°Ð½Ð¸Ñ€Ð¾Ð²Ñ‰Ð¸Ðº Ð¼Ð¾Ð¶ÐµÑ‚ Ñ€Ð°Ð±Ð¾Ñ‚Ð°Ñ‚ÑŒ Ð½ÐµÐºÐ¾Ñ€Ñ€ÐµÐºÑ‚Ð½Ð¾!" << endl;
 				cout << "----------------------------------------------------------------------------------------------------" << endl;
 			}
 			int vibor;
@@ -921,7 +921,7 @@ public:
 			do {
 				if (vibor != 1 && vibor != 2 && vibor != 3 && vibor != 4 && vibor != 5 && vibor != 6 && vibor != 7 && vibor != 0)
 				{
-					cout << "îøèáêà, ïîâòîðèòå ââîä: ";
+					cout << "Ð¾ÑˆÐ¸Ð±ÐºÐ°, Ð¿Ð¾Ð²Ñ‚Ð¾Ñ€Ð¸Ñ‚Ðµ Ð²Ð²Ð¾Ð´: ";
 					cin >> vibor;
 				}
 			} while (vibor != 1 && vibor != 2 && vibor != 3 && vibor != 4 && vibor != 5 && vibor != 6 && vibor != 7 && vibor != 0);
@@ -979,14 +979,14 @@ public:
 	{
 		system("cls");
 		us->print(cout);
-		cout << "Âûáåðèòå íîìåð çàäà÷è: ";
+		cout << "Ð’Ñ‹Ð±ÐµÑ€Ð¸Ñ‚Ðµ Ð½Ð¾Ð¼ÐµÑ€ Ð·Ð°Ð´Ð°Ñ‡Ð¸: ";
 		int number;
 		cin >> number;
 		if (number > 0 && number <= us->getKolTask())
 			return number;
 		else
 		{
-			cout << "Íåâåðíûé íîìåð" << endl;
+			cout << "ÐÐµÐ²ÐµÑ€Ð½Ñ‹Ð¹ Ð½Ð¾Ð¼ÐµÑ€" << endl;
 			system("pause");
 			return -1;
 		}
